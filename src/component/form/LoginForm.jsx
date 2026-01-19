@@ -10,17 +10,20 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const router = useRouter();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (login(email, password)) {
-      router.push("/");
+  
+    const handleSubmit = (e) => {
+    e.preventDefault(); // ✅ MUST
+
+    const success = login(email, password);
+
+    if (success) {
+      router.push("/"); // ✅ works
     } else {
-      setError("Invalid credentials");
+      setError("Invalid email or password");
     }
   };
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-black px-4">
+    <div className=" h-100 flex items-center justify-center bg-zinc-50 dark:bg-black px-4">
       <form
         onSubmit={handleSubmit}
         className="bg-white dark:bg-zinc-900 p-8 rounded-lg shadow-md w-full max-w-md"
@@ -33,7 +36,7 @@ export default function LoginPage() {
 
         <input
           type="email"
-          placeholder="Email"
+          placeholder="user@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="w-full mb-4 p-3 rounded border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-white"
