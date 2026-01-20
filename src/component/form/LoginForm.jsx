@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { login } from "@/lib/auth";
-
+import toast from "react-hot-toast";
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,14 +12,15 @@ export default function LoginPage() {
 
   
     const handleSubmit = (e) => {
-    e.preventDefault(); // ✅ MUST
+    e.preventDefault(); 
 
     const success = login(email, password);
 
     if (success) {
-      router.push("/"); // ✅ works
+      toast.success("Login successful!");
+      router.push("/"); 
     } else {
-      setError("Invalid email or password");
+      toast.error("Invalid email or password");
     }
   };
   return (

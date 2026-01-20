@@ -2,22 +2,28 @@
 
 import { useState } from "react";
 
-export default function Contact() {
+export default function CTAPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+
+  const [status, setStatus] = useState("idle");
+  // idle | loading | success | error
   const [feedback, setFeedback] = useState("");
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
     setStatus("idle");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!formData.name || !formData.email || !formData.message) {
       setStatus("error");
       setFeedback("Please fill in all fields.");
@@ -36,30 +42,27 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col px-6 py-16 bg-gray-50 overflow-y-auto">
-      {/* Heading */}
-      <h1 className="text-4xl font-bold text-center mb-10">
-        Contact Us 📞
-      </h1>
-
-      {/* Container */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Contact Info */}
-        <div className="bg-white rounded-2xl shadow-md p-8 h-full">
-          <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
+    <div className="max-w-6xl mx-auto px-6 py-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        {/* Left Content */}
+        <div>
+          <h1 className="text-4xl font-bold mb-4">
+            Get in Touch With Us 📞
+          </h1>
           <p className="text-gray-600 mb-6">
-            Have questions about your orders, books, or anything else? Send us a message or use the details below.
+            Have questions about books, orders, or delivery?  
+            Send us a message and our team will get back to you shortly.
           </p>
-          <ul className="space-y-3 text-gray-700">
+
+          <ul className="space-y-3 text-gray-600">
             <li>📧 Email: support@bookshop.com</li>
             <li>📍 Location: Dhaka, Bangladesh</li>
             <li>⏰ Support Hours: 9 AM – 8 PM</li>
-            <li>📞 Phone: +880 1234 567890</li>
           </ul>
         </div>
 
-        {/* Contact Form */}
-        <div className="bg-white rounded-2xl shadow-md p-8 h-full overflow-y-auto">
+        {/* Right Form */}
+        <div className="bg-white rounded-2xl shadow-lg p-8">
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
@@ -69,6 +72,7 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
             />
+
             <input
               type="email"
               name="email"
@@ -77,9 +81,10 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
             />
+
             <textarea
               name="message"
-              rows="6"
+              rows="4"
               placeholder="Your Message"
               className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={formData.message}
@@ -99,6 +104,7 @@ export default function Contact() {
               {status === "loading" ? "Sending..." : "Send Message"}
             </button>
 
+            {/* Feedback */}
             {feedback && (
               <p
                 className={`text-sm mt-2 ${

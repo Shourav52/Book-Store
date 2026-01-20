@@ -1,0 +1,122 @@
+[
+  {
+    "_id": "696d943af08b13665dcbfc04",
+    "title": "Winds of the Forgotten Land",
+    "author": "Emily Stone",
+    "price": 520,
+    "category": "Fantasy",
+    "rating": 4.9,
+    "stock": 12,
+    "publishedYear": 2023,
+    "image": "https://m.media-amazon.com/images/I/81bmbR6r9BL._UF1000,1000_QL80_.jpg",
+    "description": "A fantasy novel set in a forgotten land filled with magic and ancient kingdoms."
+  },
+  {
+    "_id": "696d943af08b13665dcbfc05",
+    "title": "Healthy Code, Healthy Mind",
+    "author": "Jason Lee",
+    "price": 410,
+    "category": "Technology",
+    "rating": 4.6,
+    "stock": 28,
+    "publishedYear": 2022,
+    "image": "https://m.media-amazon.com/images/I/7174P9yLRQL._AC_UF1000,1000_QL80_.jpg",
+    "description": "This book connects software engineering best practices with mental well-being."
+  },
+  {
+    "_id": "696d943af08b13665dcbfc06",
+    "title": "The Art of Simple Living",
+    "author": "Natalie Brooks",
+    "price": 330,
+    "category": "Lifestyle",
+    "rating": 4.4,
+    "stock": 45,
+    "publishedYear": 2020,
+    "image": "https://m.media-amazon.com/images/I/81+p4O0gSvL._UF1000,1000_QL80_.jpg",
+    "description": "A calming lifestyle guide that teaches minimalism and mindful living."
+  },
+  {
+    "_id": "696d943af08b13665dcbfc07",
+    "title": "Mastering JavaScript",
+    "author": "Daniel Cooper",
+    "price": 480,
+    "category": "Technology",
+    "rating": 4.7,
+    "stock": 20,
+    "publishedYear": 2021,
+    "image": "https://m.media-amazon.com/images/I/61fCrrsOE4L._UF1000,1000_QL80_.jpg",
+    "description": "An in-depth guide to modern JavaScript for beginners and professionals."
+  },
+  {
+    "_id": "696d943af08b13665dcbfc08",
+    "title": "Secrets of the Universe",
+    "author": "Alan Harper",
+    "price": 560,
+    "category": "Science",
+    "rating": 4.8,
+    "stock": 15,
+    "publishedYear": 2019,
+    "image": "https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_UF1000,1000_QL80_.jpg",
+    "description": "A fascinating exploration of space, time, and the mysteries of the cosmos."
+  },
+  {
+    "_id": "696d943af08b13665dcbfc09",
+    "title": "Startup from Scratch",
+    "author": "Michael Grant",
+    "price": 390,
+    "category": "Business",
+    "rating": 4.3,
+    "stock": 32,
+    "publishedYear": 2020,
+    "image": "https://m.media-amazon.com/images/I/81GbBJr+ANL._AC_UF1000,1000_QL80_.jpg",
+    "description": "A practical guide to building and scaling a startup from the ground up."
+  },
+  {
+    "_id": "696d943af08b13665dcbfc10",
+    "title": "Mindfulness Everyday",
+    "author": "Sophia Turner",
+    "price": 290,
+    "category": "Self-Help",
+    "rating": 4.5,
+    "stock": 40,
+    "publishedYear": 2018,
+    "image": "https://m.media-amazon.com/images/I/81q6IR6rE5L._UF1000,1000_QL80_.jpg",
+    "description": "Simple mindfulness techniques to reduce stress and improve focus."
+  },
+  {
+    "_id": "696d943af08b13665dcbfc11",
+    "title": "Design Thinking Basics",
+    "author": "Laura Kim",
+    "price": 360,
+    "category": "Design",
+    "rating": 4.4,
+    "stock": 25,
+    "publishedYear": 2021,
+    "image": "https://m.media-amazon.com/images/I/21jyS3a0ncL._AC_UF1000,1000_QL80_.jpg",
+    "description": "An introduction to design thinking and creative problem solving."
+  },
+  {
+    "_id": "696d943af08b13665dcbfc12",
+    "title": "History of Ancient Civilizations",
+    "author": "Robert Mason",
+    "price": 600,
+    "category": "History",
+    "rating": 4.6,
+    "stock": 18,
+    "publishedYear": 2017,
+    "image": "https://m.media-amazon.com/images/I/91ii8fVAg3L.jpg",
+    "description": "A detailed look into the rise and fall of ancient civilizations."
+  },
+  {
+    "_id": "696d943af08b13665dcbfc13",
+    "title": "Creative Writing Workbook",
+    "author": "Olivia Reed",
+    "price": 310,
+    "category": "Education",
+    "rating": 4.2,
+    "stock": 50,
+    "publishedYear": 2022,
+    "image": "https://m.media-amazon.com/images/I/81jRGKz4n4L._AC_UF1000,1000_QL80_.jpg",
+    "description": "Exercises and prompts to improve storytelling and creative writing skills."
+  }
+]

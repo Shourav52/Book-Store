@@ -48,10 +48,20 @@ useEffect(() => {
               <Link className={navLinkClass("/")} href="/">Home</Link>
             </li>
             <li>
+              <Link className={navLinkClass("/allbooks")} href="/books">All Blooks</Link>
+            </li>
+            <li>
+              <Link className={navLinkClass("/add-books")} href="/add-books">Add Books</Link>
+            </li>
+            <li>
               <Link className={navLinkClass("/about")} href="/about">About</Link>
             </li>
             <li>
               <Link className={navLinkClass("/contact")} href="/contact">Contact</Link>
+            </li>
+            
+            <li>
+              <Link className={navLinkClass("/privacy")} href="/privacy">Privacy</Link>
             </li>
           </ul>
         </div>
@@ -71,11 +81,21 @@ useEffect(() => {
             <Link className={navLinkClass("/")} href="/">Home</Link>
           </li>
           <li>
+              <Link className={navLinkClass("/allbooks")} href="/allbooks">All Blooks</Link>
+            </li>
+             <li>
+              <Link className={navLinkClass("/add-books")} href="/add-books">Add Books</Link>
+            </li>
+          <li>
             <Link className={navLinkClass("/about")} href="/about">About</Link>
           </li>
           <li>
             <Link className={navLinkClass("/contact")} href="/contact">Contact</Link>
           </li>
+          
+            <li>
+              <Link className={navLinkClass("/privacy")} href="/privacy">Privacy</Link>
+            </li>
         </ul>
       </div>
 
