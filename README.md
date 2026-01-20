@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚 Book Library Web Application
 
-## Getting Started
+## Project Description
+Book Library is a modern web application built with **Next.js** for the frontend and **Express.js** for the backend. It allows users to browse books, view book details, and manage items with a simple authentication system. The application features a clean and responsive UI with interactive elements, including toast notifications and dynamic routing.
 
-First, run the development server:
+---
 
+## Setup & Installation
+
+### Prerequisites
+- Node.js (v18+ recommended)
+- npm or yarn
+- MongoDB (local or cloud) for database
+
+### Backend Setup
+1. Navigate to the backend folder:
 ```bash
+cd backend
+
+Install dependencies:
+
+npm install
+
+
+Start the backend server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Backend API will be available at:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3001/api
 
-## Learn More
+Frontend Setup
 
-To learn more about Next.js, take a look at the following resources:
+Navigate to the frontend folder:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+cd frontend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Install dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+Create a .env.local file and add:
+
+NEXT_PUBLIC_API_URL=http://localhost:3001/api
+
+
+Start the development server:
+
+npm run dev
+
+
+Frontend will be available at:
+
+http://localhost:3000
+
+## Route Summary
+| Page                 | Route            | Access         |
+| -------------------- | ---------------- | -------------- |
+| Landing Page         | `/`              | Public         |
+| Login Page           | `/login`         | Public         |
+| Items / Lists        | `/allbooks`      | Public         |
+| Item Details         | `/allbooks/[id]` | Public         |
+| Add Item (Protected) | `/add-books`     | Requires Login |
+| About                | `/about`         | Public         |
+| Contact              | `/contact`       | Public         |
+| Privacy              | `/privacy`       | Public         |
+
+
+Implemented Features
+1. Landing Page
+
+Contains 7 sections (e.g., Highlights, Features, Testimonials, Newsletter, Statistics, Call-to-Action, FAQ)
+
+Navbar links to Login and Items/Lists pages
+
+Fully responsive design
+
+Interactive buttons with hover effects
+
+2. Authentication
+
+Mock login with hardcoded email & password
+
+Credentials stored in cookies
+
+Protected routes for unauthenticated users
+
+On successful login, redirects to Items/Lists page
+
+Optional: Social login (Google) using NextAuth.js (recommended)
+
+3. Item List Page
+
+Publicly accessible
+
+Fetches items from Express.js API
+
+Displays items in cards with image, title, author, price, and category
+
+"View Details" button for each item
+
+4. Item Details Page
+
+Publicly accessible
+
+Displays full details of selected item
+
+Includes image, description, price, category, and author
+
+"Add to Cart" button with toast notification
+
+5. Add Item Page (Protected)
+
+Accessible only for logged-in users
+
+Form to add new books
+
+Sends data to Express.js backend
+
+Shows toast notification on successful item creation
+
+Redirects unauthenticated users to login page
+
+6. Additional Enhancements
+
+Toast notifications for login, logout, and item actions
+
+Cursor pointer and hover effects for interactive elements
+
+Responsive Navbar & Footer
+
+Remote images properly handled with Next.js Image Optimization
+
+Dark/light mode ready (if implemented)
+
+Tech Stack
+
+Frontend: Next.js 16, React, Tailwind CSS
+
+Backend: Node.js, Express.js
+
+Database: MongoDB (optional)
+
+Notifications: react-hot-toast
+
+Authentication: Cookies / Optional NextAuth.js
+
+Deployment: Vercel (frontend), Vercel/Other host (backend)
