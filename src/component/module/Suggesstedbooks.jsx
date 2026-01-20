@@ -9,7 +9,7 @@ export default function SuggestedBooks() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3001/books")
+    fetch("https://book-library-backend-pi.vercel.app/books")
       .then(res => res.json())
       .then(data => setBooks(data.slice(0, 4))) // Only show 4 books
       .catch(err => console.error(err))

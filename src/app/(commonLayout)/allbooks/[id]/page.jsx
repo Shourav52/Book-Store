@@ -13,7 +13,7 @@ export default function BookDetails() {
   useEffect(() => {
     if (!id) return;
 
-    fetch(`http://localhost:3001/books/${id}`)
+    fetch(`https://book-library-backend-pi.vercel.app/books/${id}`)
       .then(res => res.ok ? res.json() : null)
       .then(data => setBook(data))
       .catch(err => console.error(err))

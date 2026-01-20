@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { isLoggedIn, logout } from "@/lib/auth";
+import toast from "react-hot-toast"; 
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -27,6 +28,7 @@ useEffect(() => {
   const handleLogout = () => {
     logout();
     setLoggedIn(false);
+    toast.success("Successfully logged out");
   };
 
   const navLinkClass = (path) =>
