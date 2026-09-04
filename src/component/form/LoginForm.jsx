@@ -18,7 +18,7 @@ export default function LoginPage() {
 
     if (success) {
       toast.success("Login successful!");
-      router.push("/"); 
+      router.push("/allbooks"); 
     } else {
       toast.error("Invalid email or password");
     }
